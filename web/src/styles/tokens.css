@@ -1,0 +1,63 @@
+:root {
+  /*primativ: Rohplatte */
+  --violete-50: #f5f3ff;
+  --violete-100: #ede9fe;
+  --violete-600: #7c3aed;
+  --violete-700: #6d28d9;
+
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-500: #64748b;
+  --gray-900: #0f172a;
+
+  --red-50: #fef2f2;
+  --red-600: #dc2626;
+  --green-50: #f0fdf4;
+  --green-600: #16a34a;
+  --amber-50: #fffbeb;
+  --amber-600: #d97706;
+
+  /* Semantisch: Rollen */
+  --color-bg: var(--gray-50);
+  --color-surface: #ffffff;
+  --color-border: var(--gray-200);
+  --color-text: var(--gray-900);
+  --color-text-muted: var(--gray-500);
+
+  --color-primary: var(--violete-600);
+  --color-primary-hover: var(--violet-700);
+  --color-primary-soft: var(--violet-100);
+
+  --color-danger: var(--red-600);
+  --color-danger-soft: var(--red-50);
+  --color-success: var(--green-600);
+  --color-success-soft: var(--green-50);
+  --color-warning: var(--amber-600);
+  --color-warning-soft: var(--amber-50);
+
+  /* ── Abstände: Raster in 4px-Schritten ── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+
+  /* ── Form ── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-full: 999px;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
+  --shadow-md: 0 2px 8px rgb(0 0 0 / 0.1);
+
+  /* ── Typografie ── */
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+}
