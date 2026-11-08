@@ -29,6 +29,7 @@
   --color-primary: var(--violete-600);
   --color-primary-hover: var(--violet-700);
   --color-primary-soft: var(--violet-100);
+  --color-neutral-soft: var(--gray-100);
 
   --color-danger: var(--red-600);
   --color-danger-soft: var(--red-50);
