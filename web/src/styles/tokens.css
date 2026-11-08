@@ -21,6 +21,7 @@
   /* Semantisch: Rollen */
   --color-bg: var(--gray-50);
   --color-surface: #ffffff;
+  --color-on-primary: #ffffff;
   --color-border: var(--gray-200);
   --color-text: var(--gray-900);
   --color-text-muted: var(--gray-500);
