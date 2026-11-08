@@ -1,4 +1,4 @@
-.badge{
+.badge {
   display: inline-flex;
   align-items: center;
   padding: var(--space-1) var(--space-3);
@@ -6,7 +6,7 @@
   font-size: var(--text-sm);
   font-weight: var(--weight-medium);
   line-height: 1.25;
-  white-space: nowrap;          /*verhindert, dass ein Badge in 2 Zeilen*/
+  white-space: nowrap; /*verhindert, dass ein Badge in 2 Zeilen*/
 }
 
 .neutral {
