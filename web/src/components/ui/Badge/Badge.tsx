@@ -9,6 +9,6 @@ interface BadgeProbs extends HTMLAttributes<HTMLSpanElement> {
   tone?: Tone;
 }
 
-export function Badge({tone = 'neutral', className, ...rest}: BadgeProbs) {
+export function Badge({ tone = 'neutral', className, ...rest }: BadgeProbs) {
   return <span className={cx(styles.badge, styles[tone], className)} {...rest} />;
 }
