@@ -4,6 +4,7 @@
   --violete-100: #ede9fe;
   --violete-600: #7c3aed;
   --violete-700: #6d28d9;
+  --violet-300: #b896f3;
 
   --gray-50: #f8fafc;
   --gray-100: #f1f5f9;
@@ -29,6 +30,7 @@
   --color-primary: var(--violete-600);
   --color-primary-hover: var(--violet-700);
   --color-primary-soft: var(--violet-100);
+  --color-primary-mittel: var(--violet-300);
   --color-neutral-soft: var(--gray-100);
 
   --color-danger: var(--red-600);

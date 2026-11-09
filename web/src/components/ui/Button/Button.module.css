@@ -31,6 +31,7 @@
 
 .primary:hover:not(:disabled) {
   background: var(--color-primary-hover);
+  color: var(--gray-500);
 }
 
 .secondary {
@@ -39,7 +40,7 @@
   border-color: var(--color-border);
 }
 .secondary:hover:not(:disabled) {
-  background: var(--color-bg);
+  background: var(--color-primary-mittel);
 }
 
 .danger {
