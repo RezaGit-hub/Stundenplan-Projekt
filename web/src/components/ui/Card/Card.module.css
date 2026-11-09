@@ -1,10 +1,10 @@
-.card{
+.card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
 }
 
-.padded{
+.padded {
   padding: var(--space-6);
 }
