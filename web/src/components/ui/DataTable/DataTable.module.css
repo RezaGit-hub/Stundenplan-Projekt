@@ -1,0 +1,39 @@
+.scroll {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse; /* >> Rahmen benachbarter Zellen verschmelzen zu einer Linie */
+}
+
+.th {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle; /* >> klappt auch bei Zellen mit mehreren Badges nebeneinander */
+}
+
+/* >> Die letzte Zeile braucht keine Trennlinie, die Karte hat schon einen Rahmen */
+.tr:last-child .td {
+  border-bottom: none;
+}
+
+.tr:hover {
+  background: var(--color-neutral-soft); /* >> Zeilen-Hover, was mit Inline-Styles nicht möglich war */
+}
+
+.empty {
+  padding: var(--space-8) var(--space-4);
+  text-align: center;
+  color: var(--color-text-muted);
+}
