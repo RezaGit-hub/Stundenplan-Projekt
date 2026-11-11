@@ -1,11 +1,14 @@
-import type { InputHTMLAttributes } from "react";
-import { cx } from "@/utils/cx";
+import type { InputHTMLAttributes } from 'react';
+import { cx } from '@/utils/cx';
 import styles from './SearchInput.module.css';
 
-interface SearchInputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'> {
+interface SearchInputProps extends Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  'value' | 'onChange'
+> {
   /*omit<typ> nimmt eine Typ und entfernt bestimmte Eigentschaften daraus, hier value und onChange, dann definieren wir es,
   zum beispiel hier onChange liefert direkt einen string statt <event Objekt */
-  value :string;
+  value: string;
   onChange: (value: string) => void;
 }
 
@@ -15,14 +18,14 @@ export function SearchInput({
   placeholder = 'Suchen...',
   className,
   ...rest
-}: SearchInputProps){
-  return(
+}: SearchInputProps) {
+  return (
     <div className={cx(styles.wrapper, className)}>
       {/* SVG, als Lupe, statt ein Bild, currentColor nimmt die textFarbe, aria-hidden verstckt sie vor screenreadern */}
       <svg
         className={styles.icon}
-        width= "16"
-        height= "16"
+        width="16"
+        height="16"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"

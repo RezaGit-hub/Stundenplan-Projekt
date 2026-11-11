@@ -29,7 +29,9 @@
 }
 
 .tr:hover {
-  background: var(--color-neutral-soft); /* >> Zeilen-Hover, was mit Inline-Styles nicht möglich war */
+  background: var(
+    --color-neutral-soft
+  ); /* >> Zeilen-Hover, was mit Inline-Styles nicht möglich war */
 }
 
 .empty {

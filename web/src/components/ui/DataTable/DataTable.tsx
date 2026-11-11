@@ -1,16 +1,19 @@
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react';
 import styles from './DataTable.module.css';
 
-export interface Column<T>{   /*T ist der typ eine Zeile*/
+export interface Column<T> {
+  /*T ist der typ eine Zeile*/
   key: string;
   header: string;
-  render: (row: T) => ReactNode;        /*render bekommt eine Zeile und liefert was in der Zeile stehen soll*/
+  render: (
+    row: T,
+  ) => ReactNode; /*render bekommt eine Zeile und liefert was in der Zeile stehen soll*/
 }
 
-interface DataTableProps<T>{
+interface DataTableProps<T> {
   columns: Column<T>[];
   rows: T[];
-  getRowKey: (row:T) => string; /*es braucht pro ZEile einen eindutigen Key. */
+  getRowKey: (row: T) => string; /*es braucht pro ZEile einen eindutigen Key. */
   emptyMessage?: string;
 }
 
@@ -20,8 +23,8 @@ export function DataTable<T>({
   rows,
   getRowKey,
   emptyMessage = 'keine Einträge vorhanden.',
-}: DataTableProps<T>){
-  return(
+}: DataTableProps<T>) {
+  return (
     <div className={styles.scroll}>
       <table className={styles.table}>
         <thead>
@@ -40,7 +43,7 @@ export function DataTable<T>({
                 {emptyMessage}
               </td>
             </tr>
-          ): (
+          ) : (
             rows.map((row) => (
               <tr key={getRowKey(row)} className={styles.tr}>
                 {columns.map((column) => (
