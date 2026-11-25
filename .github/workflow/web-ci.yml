@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   web:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     #Notbremse: wenn es hängt, bricht github es in 10 Minuten
     timeout-minutes: 10
     defaults:
