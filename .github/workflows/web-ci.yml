@@ -1,0 +1,59 @@
+name: Web CI
+
+#jede Commit würde zwei mal bei push und pull geprüft
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+#ein automatische erzugte zugang_token darf nur lesen,
+permissions:
+  contents: read
+
+#wenn einmal gepusht , wird neue geprüft, wenn noch alte Prüfung gibt wird es abgebrochen.
+
+concurrency:
+  group: web-ci-${{github.ref}}
+  cancel-in-progress: true
+
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    #Notbremse: wenn es hängt, bricht github es in 10 Minuten
+    timeout-minutes: 10
+    defaults:
+      run:
+      #alle run Befehle laufen in web Ordner, also cd web.
+        working-directory: web
+
+    steps:
+      # holt den Code des Repo auf den leeren runner.
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+        # installiert Node auf einer feste version
+          node-version: 24
+          #cache:npm merkt sich heruntergeladene pakete zwichen läufen und spart zeit
+          cache: npm
+          #cache schlüsseö hängt an der Lock-Datei, ändert sich die abhängikeiten , wird es neu geladen
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci     # npm ci installiert exat was in package-lock.jason steht, und bricht ab wenn pakage.jason und lock-Datei nicht zusammen passen.
+
+      - name: Check formatting
+      # schnell und billig prüft was falsch formatiert ist.
+        run: npm run format:check
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
